@@ -27,7 +27,7 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 
 
-Ticket System
+## Ticket System
 
 About app:
 This is the frontend framework for an application “Ticket System”. In this I have tried making the frontend for this app whose backend is written in rails platform in ruby language. It fetches email from the GMAIL with a particular subject , in this it is “ app subject”  and makes a card for that email. There are many users, and admin. Admin can assign that card to any of the user. 
