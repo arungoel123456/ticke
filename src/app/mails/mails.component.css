@@ -26,3 +26,9 @@
     left: 0;
     margin: auto;
 }
+.button{
+    height: 30px;
+    border: blue;
+    background: blue;
+    color: white;
+}

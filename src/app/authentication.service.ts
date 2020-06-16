@@ -60,4 +60,9 @@ export class AuthenticationService  {
     return this.http.get<any>("http://localhost:3000/card/assigned") ;
   }
 
+  unassign(card) : Observable<any>
+  {
+    return this.http.post<any>("http://localhost:3000/card/unassign" , {card_id: card.id } )
+  }
+
 }
