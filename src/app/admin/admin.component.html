@@ -1,0 +1,32 @@
+<div class="heading" ><p>Cards</p></div>
+<br>
+
+<input type="radio" id="assigned" name="admin" value="assigned" (change)="get_assigned()" >
+<label for="assigned">Assigned</label><br>
+<input type="radio" id="not-assigned" name="admin" value="not-assigned" (change)="get_not_assigned()" >
+<label for="not-assigned">Not assigned</label><br>
+
+
+<div class="outer-box" >
+    <div *ngFor = "let item of list" >
+        <div class="card" >
+            <span> <h3>From : </h3>  {{item.from}}</span>
+            <br>
+            <div *ngIf="flag; then thenBlock else elseBlock"> </div>
+            <ng-template #thenBlock> 
+                <p>Assigned to User {{item.user_id}} </p>
+
+            </ng-template>
+
+            <ng-template #elseBlock> <h3>Assign To: </h3>
+                <div *ngFor = "let item2 of list2" >
+                    <span>{{item2.email}}</span>
+                    <button (click)= "modify( item , item2 ) " class = "button"> Assign </button>
+                </div> </ng-template>
+            
+
+        </div>
+        <br>
+        
+    </div>
+</div>

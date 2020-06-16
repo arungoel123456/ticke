@@ -1,0 +1,33 @@
+<div class= "signin-form">
+  <br>
+  <h3 class="sign-in-heading">
+    Sign In 
+  </h3>
+  <br>
+  <form [formGroup]="signinForm" (ngSubmit)="onSubmit()">     
+        <div>
+          <label for="email">
+            Email
+          </label>
+          <div>
+            <input id="email" type="email" formControlName="email" class="input-box" >
+          </div>
+        </div>
+        <br>
+        <div>
+          <label for="password">
+            Password
+          </label>
+          <div>
+            <input id="password" type="password" formControlName="password" class="input-box" >
+          </div>
+        </div>
+        <br>
+        <button [disabled]="!signinForm.valid" class="button" type="submit" >Sign In</button>
+  </form>
+  <br>
+  <p>
+    Create New
+  </p>
+  <button (click)="signup()" class="button" >SIGNUP </button>
+</div>
