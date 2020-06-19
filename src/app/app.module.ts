@@ -16,10 +16,7 @@ import { MailsComponent } from './mails/mails.component';
 import { AdminComponent } from './admin/admin.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CardComponent } from './card/card.component';
-
-
-
-
+import { UserComponent } from './user/user.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +28,8 @@ import { CardComponent } from './card/card.component';
     HomeComponent,
     MailsComponent,
     AdminComponent,
-    CardComponent
+    CardComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,
@@ -46,6 +44,7 @@ import { CardComponent } from './card/card.component';
       {path: 'home' , component: HomeComponent },
       {path: 'admin' , component: AdminComponent },
       {path: 'card/:card_id' , component: CardComponent },
+      {path: 'user/:user_id' ,  component: UserComponent },
 
     ]),
     BrowserAnimationsModule

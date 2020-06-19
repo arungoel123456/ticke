@@ -91,7 +91,13 @@ export class AuthenticationService  {
   {
     let params = new HttpParams().set('comment_id' , comment_id);
     let options = { params: params };
-    return this.http.delete("https://localhost:3000/comments/destroy" , options );
+    return this.http.delete("http://localhost:3000/comments/destroy" , options );
+  }
+
+  userShow(user_id): Observable<any>
+  {
+    let params= new HttpParams().set('user_id', user_id);
+    return this.http.get<any>("http://localhost:3000/users/show", {params} );
   }
 
 }
