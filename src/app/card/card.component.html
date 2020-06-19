@@ -1,0 +1,36 @@
+<div>
+    <button (click)="clicked()"  class="button" > Signout </button>
+</div>
+
+<div class="outer-box" >
+
+    <form [formGroup]="commentForm" (ngSubmit)="onSubmit()" >
+        <div>
+            <label for="comment">
+            <h4>Add Comment</h4>
+            </label>
+            <div>
+            <input id="comment" type="text" formControlName="comment" class="input-box" >
+            </div>
+        </div>
+        <!-- <input type="hidden" id="card_id" name="card_id" value={{card_id}}> -->
+        <br>
+        <button [disabled]="!commentForm.valid" class="button" type="submit" >Submit </button>
+    </form>
+
+
+    <h1>COMMENTS</h1>
+    <div class="outer-box" >
+        <div *ngFor = "let comment of comment_list" >
+            <div class="card" >
+                <span>Comment to user {{comment.user_id}}: </span>
+                <span>   {{comment.body}}   </span>
+                <br> 
+                <!-- <button class="button" (click)="deleteComment(  comment.id  )" >  Remove Comment </button>    -->
+            </div>
+            <br>  
+
+        </div>
+    </div>
+
+</div>

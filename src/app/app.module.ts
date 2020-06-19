@@ -15,6 +15,7 @@ import { HomeComponent } from './home/home.component';
 import { MailsComponent } from './mails/mails.component';
 import { AdminComponent } from './admin/admin.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CardComponent } from './card/card.component';
 
 
 
@@ -29,7 +30,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     SignoutComponent,
     HomeComponent,
     MailsComponent,
-    AdminComponent
+    AdminComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,
@@ -43,6 +45,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
       {path: 'signin' ,component: SigninComponent },
       {path: 'home' , component: HomeComponent },
       {path: 'admin' , component: AdminComponent },
+      {path: 'card/:card_id' , component: CardComponent },
 
     ]),
     BrowserAnimationsModule

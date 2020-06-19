@@ -28,9 +28,10 @@ export class SigninComponent implements OnInit {
   {
     const formValue = this.signinForm.value;
     this.authenticationService.getJWT(formValue).subscribe((data) => {
-      console.log(data)
-      localStorage.setItem("jwt" , data["jwt"]) 
-      this.router.navigateByUrl('/home');
+      console.log("data");
+      console.log(data);
+      localStorage.setItem("jwt" , data["jwt"]) ;
+      this.router.navigateByUrl('/home');  
     });   
   }
 

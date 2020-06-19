@@ -10,21 +10,22 @@
 <div class="outer-box" >
     <div *ngFor = "let item of list" >
         <div class="card" >
-            <span> <h3>From : </h3>  {{item.from}}</span>
+            <span> <h3>From : </h3>  {{item.from}}   </span>
             <br>
+            <button [routerLink]="['/card', item.id ]" >show</button>
             <div *ngIf="flag; then thenBlock else elseBlock"> </div>
             <ng-template #thenBlock> 
                 <p>Assigned to User {{item.user_id}} </p>
 
             </ng-template>
 
-            <ng-template #elseBlock> <h3>Assign To: </h3>
+            <ng-template #elseBlock> 
+                <h3>Assign To: </h3>
                 <div *ngFor = "let item2 of list2" >
                     <span>{{item2.email}}</span>
                     <button (click)= "modify( item , item2 ) " class = "button"> Assign </button>
-                </div> </ng-template>
-            
-
+                </div>
+            </ng-template>
         </div>
         <br>
         

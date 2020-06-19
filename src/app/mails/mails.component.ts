@@ -24,7 +24,7 @@ export class MailsComponent implements OnInit {
   unassign(card)
   {
     this.authenticationService.unassign(card).subscribe( (data) => {
-      console.log(data);
+      console.log(data);    
       this.list= data;
     });
   }

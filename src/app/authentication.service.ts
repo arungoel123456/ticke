@@ -65,4 +65,33 @@ export class AuthenticationService  {
     return this.http.post<any>("http://localhost:3000/card/unassign" , {card_id: card.id } )
   }
 
+  show(card_id): Observable<any>
+  {
+    let params = new HttpParams().set('card_id' , card_id);
+    return this.http.get<any>("http://localhost:3000/card/show",  {params});
+  }
+
+  add_comment(commentValue, user_id, card_id)
+  {
+    // let params = new HttpParams().set('card_id' , card_id).set('user_id' , user_id).set('comment' , commentValue);
+    return this.http.post<any>("http://localhost:3000/comments/create" , {
+      card_id: card_id,
+      user_id: user_id,
+      comment: commentValue
+    });
+  }
+
+  getAllComments(card_id): Observable<any>
+  {
+    let params = new HttpParams().set('card_id' , card_id)
+    return this.http.get<any>("http://localhost:3000/comments/get_all" , {params} );
+  } 
+
+  deleteComment(comment_id): Observable<any>
+  {
+    let params = new HttpParams().set('comment_id' , comment_id);
+    let options = { params: params };
+    return this.http.delete("https://localhost:3000/comments/destroy" , options );
+  }
+
 }

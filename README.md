@@ -32,6 +32,4 @@ Authentication Service: Any authentication service with few basic methods for al
 ### Future Work:
 1. Applying search bar for searching emails .
 2. Making a dashboard for admin which contains all the assigned mails as well as unassigned mails.
-
-
-
+3. Making a dropdown for selecting a user and showing its assigned cards to admin.
