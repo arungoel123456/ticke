@@ -12,6 +12,7 @@ import { AuthenticationService } from '../authentication.service';
 export class UserComponent implements OnInit {
 
   user_id: any;
+  user_data: any;
   
   constructor(private route: ActivatedRoute,
     private authenticationService: AuthenticationService,
@@ -25,6 +26,7 @@ export class UserComponent implements OnInit {
       console.log(this.user_id);
       this.authenticationService.userShow(this.user_id).subscribe( (data) => {
         console.log(data);
+        this.user_data= data;
       });
 
     });
