@@ -23,7 +23,7 @@
     <div class="outer-box" >
         <div *ngFor = "let comment of comment_list" >
             <div class="card" >
-                <span>Comment to user  <button [routerLink]="['/user', comment.user_id ]" > {{comment.user_id}}: </button> </span>
+                <span>Comment to user  <button [routerLink]="['/user', comment.user_id ]"  class="button"> {{comment.user_id}}: </button> </span>
                 <span>   {{comment.body}}   </span>
                 <br> 
                 <!-- <button class="button" (click)="deleteComment(  comment.id  )" >  Remove Comment </button>    -->
